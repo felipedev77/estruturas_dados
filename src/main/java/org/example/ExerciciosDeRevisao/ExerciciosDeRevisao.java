@@ -1,6 +1,7 @@
 package org.example.ExerciciosDeRevisao;
 
 import java.util.Arrays;
+import java.util.Scanner;
 
 public class ExerciciosDeRevisao {
     public static void main(String[] args) {
@@ -14,5 +15,38 @@ public class ExerciciosDeRevisao {
             System.out.print(numerosImpares[i - 1] + " ");
         }
 
+        //Resposta exercício 3
+        Scanner input = new Scanner(System.in);
+        System.out.println("Digite sua 1ª nota:");
+        double nota1 = input.nextDouble();
+        System.out.println("Digite sua 2ª nota:");
+        double nota2 = input.nextDouble();
+        System.out.println("Digite sua 3ª nota:");
+        double nota3 = input.nextDouble();
+        System.out.println("Digite sua 4ª nota:");
+        double nota4 = input.nextDouble();
+        System.out.println("Primeira nota: " + nota1 + "\n" + "Segunda nota: "+ nota2 + "\n" + "Terceira nota: " + nota3
+                + "\n" + "Quarta nota: " + nota4);
+        System.out.println("A sua média de notas é: "+ (nota1 + nota2 + nota3 + nota4)/4);
+
+
+        //Respostas exercícios questão 4
+        int numbOfConsonants = 0;
+        char[] vectorOfCharacters = {'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J'};
+        for (int i = 0; i < vectorOfCharacters.length; i++){
+            if (!isConsonant(vectorOfCharacters[i])){
+                numbOfConsonants++;
+            }
+        }
+        System.out.println("A quantidade de consoantes do vetor é: "+ numbOfConsonants);
+
+        //Respostas exercícios questão 5
+
+
     }
+    public static boolean isConsonant(char letter) {
+        String vogals = "aeiouAEIOU";
+        return vogals.contains(String.valueOf(letter));
+    }
+
 }
