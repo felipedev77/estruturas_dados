@@ -33,11 +33,7 @@ public class ExerciciosDeRevisao {
         //Respostas exercícios questão 4
         int numbOfConsonants = 0;
         char[] vectorOfCharacters = {'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J'};
-        for (int i = 0; i < vectorOfCharacters.length; i++){
-            if (!isConsonant(vectorOfCharacters[i])){
-                numbOfConsonants++;
-            }
-        }
+        for (char vectorOfCharacter : vectorOfCharacters) { if (!isConsonant(vectorOfCharacter)) { numbOfConsonants++; }}
         System.out.println("A quantidade de consoantes do vetor é: "+ numbOfConsonants);
 
         //Respostas exercícios questão 5
@@ -61,6 +57,25 @@ public class ExerciciosDeRevisao {
         System.out.println(Arrays.toString(even));
         System.out.println(Arrays.toString(odd));
 
+        //Resposta dos exercícios questão 6
+        double[] media = new double[10];
+        for (int i = 1; i <= 10; i++){
+            int temp = i - 1;
+            double note1, note2, note3, note4;
+            System.out.println("Informe a 1ª nota do " + i + "º aluno" );
+            note1 = input.nextDouble();
+            System.out.println("Informe a 2ª nota do " + i + "º aluno" );
+            note2 = input.nextDouble();
+            System.out.println("Informe a 3ª nota do " + i + "º aluno" );
+            note3 = input.nextDouble();
+            System.out.println("Informe a 4ª nota do " + i + "º aluno" );
+            note4 = input.nextDouble();
+            media[temp] = (note1 + note2 + note3 + note4) / 4;
+
+        }
+        for (int i = 0; i < media.length; i++) {
+            System.out.println("A média do " + (i + 1) + "º aluno é igual a " + String.format("%.2f", media[i]));
+        }
     }
     public static boolean isConsonant(char letter) {
         String vogals = "aeiouAEIOU";
