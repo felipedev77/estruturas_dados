@@ -76,6 +76,42 @@ public class ExerciciosDeRevisao {
         for (int i = 0; i < media.length; i++) {
             System.out.println("A média do " + (i + 1) + "º aluno é igual a " + String.format("%.2f", media[i]));
         }
+
+        //Exercícios questão 7
+
+        int[] valuesOperations = new int[5];
+        int tempSum = 0;
+        int tempTimes = 1;
+        for (int i = 0; i < valuesOperations.length; i++){
+            int temporaryValue = i+1;
+            System.out.println("Digite o " + temporaryValue + "º valor: " );
+            valuesOperations[i] = input.nextInt();
+            tempSum += valuesOperations[i];
+            tempTimes *= valuesOperations[i];
+        }
+        System.out.println("Os valores digitados foram: " + Arrays.toString(valuesOperations));
+        System.out.println("A soma dos valores digitados é igual a " + tempSum);
+        System.out.println("O produto dos produtos digitados é igual a " + tempTimes);
+
+        //Exercícios questões 8
+
+        int[] ages = new int[5];
+        double[] heights = new double[5];
+        int temporaryIndex = ages.length;
+        for (int i = 1; i <= 5; i++){
+            int realIndex = i - 1;
+            System.out.println("Digite a " + i + "ª idade: ");
+            ages[realIndex] = input.nextInt();
+            System.out.println("Digite a " + i + "ª altura: ");
+            heights[realIndex] = input.nextDouble();
+        }
+        while (temporaryIndex > 0) {
+            int realIndex = temporaryIndex - 1;
+            System.out.println("A idade da " + temporaryIndex + "ª pessoa é: " + ages[realIndex]);
+            System.out.println("A altura da " + temporaryIndex + "ª pessoa é: " + heights[realIndex]);
+            temporaryIndex--;
+        }
+
     }
     public static boolean isConsonant(char letter) {
         String vogals = "aeiouAEIOU";
