@@ -17,6 +17,7 @@ public class ExerciciosDeRevisao {
 
         //Resposta exercício 3
         Scanner input = new Scanner(System.in);
+        //arrumar isso daqui
         System.out.println("Digite sua 1ª nota:");
         double nota1 = input.nextDouble();
         System.out.println("Digite sua 2ª nota:");
